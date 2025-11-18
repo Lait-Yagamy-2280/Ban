@@ -8,7 +8,7 @@ import (
 func main() {
 	//task 1
 	days := [...]string{"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"}
-	n := int(time.Now().Weekday())
+	n := int(time.Now().Weekday())-1
 	slice1 := days[n:]
 	fmt.Printf("Massive: %v %v\n", len(days), cap(days))
 	fmt.Printf("Massive: %v %v\n", len(slice1), cap(slice1))
@@ -32,3 +32,4 @@ func main() {
 	}
 	fmt.Println()
 }
+
